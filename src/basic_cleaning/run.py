@@ -34,6 +34,10 @@ def go(args):
     df['last_review'] = pd.to_datetime(df['last_review'])
     logger.info('basic_cleaning done')
 
+    # adding to fix test_proper_boundaries failure
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    df = df[idx].copy()
+
     # saving cleaned data as clean_sample.csv file
     df.to_csv('clean_sample.csv', index=False)
     logger.info('Dataframe saved to csv')
