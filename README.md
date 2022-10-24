@@ -564,6 +564,10 @@ Then commit your change, make a new release (for example ``1.0.1``) and retry (o
 ``-v 1.0.1`` when calling mlflow this time). Now the run should succeed and voit la', 
 you have trained your new model on the new data.
 
+
+Submission:
+Link to W&B Project: https://wandb.ai/sk36/nyc_airbnb/runs/66n0u96h
+
 ## License
 
 [License](LICENSE.txt)
